@@ -46,12 +46,14 @@ header{
     display: flex;
     align-items: center;
     gap: 20px;
+    padding-right: 30px;
 }
 .head a {
     color: var(--white2);
 }
 .logo{
-    margin-left: 30px;
+    margin-right: 80px;
+    padding-left: 20px;
 }
 ul{
     display: flex;
@@ -90,7 +92,7 @@ main{
     background-color: var(--black1);
 }
 .section1{
-    /* height: 100%;
+    /* 
     width: 100%;
     background-image: url(images/background.svg);
     background-repeat: no-repeat;
@@ -105,6 +107,7 @@ main{
 }
 .background{
     position: relative;
+    text-align: center;
 }
 .pedar{
     position: absolute;
@@ -124,6 +127,9 @@ main{
 
 
 }
+.fasele{
+    padding-right: 80px;
+}
 .section2{
     width: 100%;
     padding-left: 70px;
@@ -137,11 +143,10 @@ main{
     /* padding-right: 50px; */
 }
 .film{
-    overflow-x: scroll;
     padding-left: 70px;
 }
 .film img {
-    width: 194px;
+    width: 140px;
     box-sizing: border-box;
     margin-top: 20px;
 }
@@ -177,12 +182,15 @@ footer nav{
     color: var(--gray3);
 }
 @media screen and (max-width:376px){
-    .mobilelogo{
-        display: initial;
+    .head a {
+        display: none;
 
     }
-    .logo{
+    .head ul {
         display: none;
+    }
+    .mobilelogo{
+        display: initial;
     }
     
 }
