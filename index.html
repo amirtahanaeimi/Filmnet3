@@ -8,17 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
     
     <title>filmnet</title>
 </head>
 <body>
     <header>
         <div class="head">
-            <a class="mobilelogo" href="#"><img src="images/Button (2).svg"> <img src="images/Link → SVG (1).svg"></a>
+            <a class="mobilelogo" href="#"><img src="images/Button (2).svg"> <img src="images/net.svg"></a>
             <a class="logo" href="#"><img src="images/filmnet.svg"></a>
-            <a href="#">فیلم </a>
-            <a href="#">سریال</a>
+            <a class="dis" href="#">فیلم </a>
+            <a class="dis" href="#">سریال</a>
             <ul>
                 <li>دسته بندی </li>
                 <li>کودک و نوجوان</li>
@@ -38,7 +40,7 @@
     </header>
     <main>
         <nav class="section1">
-            <img  class="background"    src="images/background.svg">
+            <!-- <img  class="background"    src="images/background.svg"> -->
            <div class="pedar , fasele" > <a href="#"><img src="images/pedar.svg" ></a></div>
            <div class="etelaat , fasele">
                 <img src="images/Paragraph+Overlay.svg">
@@ -47,7 +49,7 @@
             </div>
         </nav>
         <nav class="section2">
-            <label for="list"><a href="#"> تازه های فیلمنت<img src="images/SVG (2).svg"></a></label>
+            <label for="list" style="padding-left: 1000px;"><a href="#"> تازه های فیلمنت<img src="images/SVG (2).svg"></a></label>
             <ul class="film"  id="list">
                 <li> 
                     <img src="images/Item.svg" >
@@ -94,7 +96,26 @@
 
             </ul>
         </nav>
-    </main>
+
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"style="color:white;">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <label for="movieslist" style="color: white; font-size: 2rem; margin-left: 40px;"><p>IMDB 250</p></label>
+       <div id="movieslist">
+       </div>
+
+       
+        <ul class="pagination" style="gap: 0;">
+          <!-- <li class="page-item "><button class="page-link" >1</button></li>
+          <li class="page-item"><button class="page-link" >2</button></li>
+          <li class="page-item"><button class="page-link" >3</button></li> -->
+        </ul>
+
+       
+    
+      
     <footer>
         <nav>
             <a href="#"><img src="images/Link .. SVG.svg"></a>
@@ -117,6 +138,7 @@
             <img src="images/Link .neshane_sabt.svg.svg">
         </nav>
     </footer>
+    <script src="script.js"></script>
     
 </body>
 </html>

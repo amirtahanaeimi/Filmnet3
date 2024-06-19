@@ -19,20 +19,20 @@ a{
     text-decoration: none;
 }
 html{
-    height:max-content;
     width: 100vw;
     font-size:14px;
     
 }
 body{
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: var(--black1);
     overflow-x: hidden;
     
 }
 header{
     position: relative;
-    z-index: 0;
+    z-index: 1;
     height: 56px;
     background-color: var(--black1);
     width: 100%;
@@ -86,18 +86,17 @@ li{
     margin-right: 20px;
 }
 main{
-    position: relative;
-    z-index: 1;
     height: 100%;
     background-color: var(--black1);
 }
 .section1{
-    /* 
-    width: 100%;
+   
     background-image: url(images/background.svg);
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center; */
+    background-position: center; 
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,6 +130,9 @@ main{
     padding-right: 80px;
 }
 .section2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
     padding-left: 70px;
     padding-right: 50px;
@@ -144,14 +146,16 @@ main{
 }
 .film{
     padding-left: 70px;
+    flex: 1;
 }
 .film img {
-    width: 140px;
+    /* width: 140px; */
     box-sizing: border-box;
     margin-top: 20px;
 }
+
 .last img{
-    width: 424px;
+    flex: 1;
     box-sizing: border-box;
     margin-top: 20px;
 }
@@ -163,12 +167,13 @@ nav label a {
 }
 footer{
     color: var(--white2);
+    /* margin-top: 1000px; */
     padding-right:60px;
     padding-left:60px;
     padding-top:60px;
     height: 300px;
-    position: relative;
-    z-index: 2;
+    width: 100vw;
+    position: absolute;
     background-color: var(--gray2);
     display: flex;
     flex-direction: column;
@@ -181,10 +186,34 @@ footer nav{
 .sabt{
     color: var(--gray3);
 }
+#movieslist{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    overflow-x: scroll;
+
+}
+.cardtitel1{
+    color: var(--white1);
+    font-family: var(--font-family)
+
+}
+.cardbody1{
+    height: 20px;
+    width: 246px;
+    padding-bottom: 40px;
+    background-color: var(--black1);
+}
+/* label{
+    padding-left: 1200px;
+} */
 @media screen and (max-width:376px){
-    .head a {
+    .logo {
         display: none;
 
+    }
+    .dis{
+        display: none;
     }
     .head ul {
         display: none;
@@ -192,5 +221,21 @@ footer nav{
     .mobilelogo{
         display: initial;
     }
-    
+    .login{
+        margin-left: 25px;
+    }
+    .section1{
+        background-image: url(images/bacgroundmobile.svg);
+        background-size: contain;
+    }
+    .pedar{
+        display: none;
+    }
+    .etelaat{
+        display: none;
+    }
+    .section2{
+        overflow-x: scroll;
+    }
+
 }
